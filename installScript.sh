@@ -20,7 +20,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 # Vim
 echo "Installing Vim"
-sudo apt-get -y install Vim
+sudo apt-get -y install vim
 
 # Setup Dotfiles
 echo "Setting up Dotfiles"
