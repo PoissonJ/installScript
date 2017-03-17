@@ -56,7 +56,7 @@ sudo add-apt-repository -y \
    $(lsb_release -cs) \
    stable"
 sudo apt-get -y --force-yes update
-sudo apt-get -y install docker-engine
+sudo apt-get -y install docker-ce
 sudo apt-get -y install docker-compose
 sudo usermod -aG docker ${USER}
 
