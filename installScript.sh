@@ -34,6 +34,7 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 echo "Installing Google Chrome"
 sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 sudo add-apt-repository -y "deb http://dl.google.com/linux/chrome/deb/ stable main"
+sudo apt-get -y --force-yes update
 sudo apt-get -y install google-chrome-stable
 
 # Spotify
