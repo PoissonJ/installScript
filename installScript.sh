@@ -77,29 +77,29 @@ nvm install node
 nvm use node
 
 # Visual Studio Code
-echo "Installing Visual Studio Code"
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get -y update
-sudo apt-get -y install code
-mkdir ~/.config/Code
-touch ~/.config/Code/User
-cat >~/.config/Code/User <<EOL
-// Place your settings in this file to overwrite the default settings
-{
-      "vim.insertModeKeyBindings": [
-       {
-           "before": ["j", "k"],
-           "after": ["<Esc>"]
-       }
-  ]
-,
-"window.zoomLevel": 0.5,
-"editor.tabSize": 2,
-"vsicons.projectDetection.autoReload": true,
-"workbench.iconTheme": "vscode-icons"
-}
-EOL
+#echo "Installing Visual Studio Code"
+#curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+#sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+#sudo apt-get -y update
+#sudo apt-get -y install code
+#mkdir ~/.config/Code
+#touch ~/.config/Code/User
+#cat >~/.config/Code/User <<EOL
+#// Place your settings in this file to overwrite the default settings
+#{
+      #"vim.insertModeKeyBindings": [
+       #{
+           #"before": ["j", "k"],
+           #"after": ["<Esc>"]
+       #}
+  #]
+#,
+#"window.zoomLevel": 0.5,
+#"editor.tabSize": 2,
+#"vsicons.projectDetection.autoReload": true,
+#"workbench.iconTheme": "vscode-icons"
+#}
+#EOL
 
 
