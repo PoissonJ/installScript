@@ -25,6 +25,7 @@ sudo apt-get -y install vim
 # Setup Dotfiles
 echo "Setting up Dotfiles"
 rm ~/.gitconfig
+rm ~/.vimrc
 rm ~/.zshrc
 git clone https://github.com/PoissonJ/dotfiles.git
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
