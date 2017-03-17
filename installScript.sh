@@ -28,6 +28,7 @@ rm ~/.gitconfig
 rm ~/.zshrc
 git clone https://github.com/PoissonJ/dotfiles.git
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # Google Chrome
