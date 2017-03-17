@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # basic update
-#sudo apt-get -y --force-yes update
-#sudo apt-get -y --force-yes upgrade
+sudo apt-get -y --force-yes update
+sudo apt-get -y --force-yes upgrade
 
 # Install Curl
 echo "Installing Curl"
@@ -23,6 +23,7 @@ echo "Installing Vim"
 sudo apt-get -y install Vim
 
 # Setup Dotfiles
+echo "Setting up Dotfiles"
 rm ~/.gitconfig
 rm ~/.zshrc
 git clone https://github.com/PoissonJ/dotfiles.git
@@ -30,11 +31,10 @@ ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # Google Chrome
-cd ~/Downloads
 echo "Installing Google Chrome"
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg –i google-chrome-stable_current_amd64.deb
-cd ~
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+sudo add-apt-repository -y "deb http://dl.google.com/linux/chrome/deb/ stable main"
+sudo apt-get -y install google-chrome-stable
 
 # Spotify
 echo "Installing Spotify"
@@ -81,6 +81,8 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get -y update
 sudo apt-get -y install code
+mkdir ~/.config/Code
+touch ~/.config/Code/User
 cat >~/.config/Code/User <<EOL
 // Place your settings in this file to overwrite the default settings
 {
